@@ -15,7 +15,6 @@ minify:
   disableXML: true
   minifyOutput: true
 
-
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Vojtech Mares's blog
@@ -45,7 +44,6 @@ params:
     favicon32x32: "/favicon-32x32.png"
     apple_touch_icon: "/apple-touch-icon.png"
     # safari_pinned_tab: "<link / abs url>"
-
 
   profileMode:
     enabled: false
@@ -82,15 +80,16 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
+
 menu:
   main:
     - name: Archive
       url: archives
       weight: 5
-    # - identifier: search
-    #   name: Search
-    #   url: /search/
-    #   weight: 10
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 10
     - identifier: tags
       name: Tags
       url: /tags/
@@ -99,3 +98,13 @@ menu:
 taxonomies:
   tag: tags
   series: series
+
+outputFormats:
+  SearchIndex:
+    mediaType: "application/json"
+    baseName: "index"
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+  home: ["HTML","RSS", "SearchIndex"]
