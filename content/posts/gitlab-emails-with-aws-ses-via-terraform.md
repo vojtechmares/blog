@@ -180,3 +180,11 @@ If you are using port `587` like I do, do not forget to enable `STARTTLS`!
 # Summary
 
 In summary, I believe this configuration is pretty straight-forward with no hick ups. It took me about 15 minutes to configure and I did not need to touch the configuration ever since.
+
+## Price
+
+As I have mentioned it before at the beginning of the article, that a price is a concern. I would like to share that as well.
+
+Since I am using SES only for self-hosted GitLab and Sentry where outgoing mail is something like 10-50 emails per month, the price is not issue at all.
+
+In reality I pay just a few cents a month and mostly because of S3 traffic, but that belongs to a different thing.
